@@ -1,0 +1,7 @@
+pre_commit_hook.py - Ensure code is PEP8 compliant and all unit tests pass
+
+Installation
+
+    git clone git://github.com/jk0/bzr-pre-commit-hook.git
+    mkdir ~/.bazaar/plugins
+    cp ./bzr-pre-commit-hook/pre_commit_hook.py ~/.bazaar/plugins
