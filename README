@@ -1,4 +1,4 @@
-pre_commit_hook.py - Ensure code is PEP8 compliant and all unit tests pass
+pre_commit_hook.py - Ensure code is PEP8 compliant and all unit tests pass.
 
 Installation
 
