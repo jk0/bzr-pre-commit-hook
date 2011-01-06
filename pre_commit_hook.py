@@ -11,6 +11,9 @@ from bzrlib import errors
 CHECK_PEP8 = True
 CHECK_TESTS = False
 
+PEP8_PATH = "./nova"
+UNIT_TESTS = "./run_tests.sh"
+
 
 def pre_commit_hook(
     local,
@@ -27,12 +30,11 @@ def pre_commit_hook(
             "pep8",
             "--repeat",
             "--show-source",
-            "--show-pep8",
-            "./nova"]):
+            PEP8_PATH]):
             raise errors.BzrError("Code is not PEP8 compliant.")
 
     if CHECK_TESTS:
-        if subprocess.call("./run_tests.sh"):
+        if subprocess.call(UNIT_TESTS):
             raise errors.BzrError("Unit tests did not pass.")
 
 
